@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Kaiti";
+    src: url("../font/AdobeKaitiStd-Regular.otf");
+}
+
+html {
+    font-family: Monaco;
+}
+
+
+
+ruby#chinese-name {
+    font-size: 30px;
+    font-family: Kaiti
+}
+
+ruby#chinese-name rt {
+    font-family: Arial
+}
