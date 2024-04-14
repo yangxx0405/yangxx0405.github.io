@@ -7,7 +7,7 @@ html {
     font-family: Monaco;
 }
 
-
+/* --------------------- Chinses Name with pinyin ---------------------  */
 
 ruby#chinese-name {
     font-size: 30px;
@@ -16,32 +16,6 @@ ruby#chinese-name {
 
 ruby#chinese-name rt {
     font-family: Arial
-}
-
-
-@font-face {
-    font-family: "Monaco";
-    src: url("../font/monaco.ttf");
-}
-@font-face {
-    font-family: "TexGyre";
-    src: url("../font/texgyrepagella-regular.otf");
-}
-@font-face {
-    font-family: "TexGyre-bold";
-    src: url("../font/texgyrepagella-bold.otf");
-}
-@font-face {
-    font-family: "Kaiti";
-    src: url("../font/AdobeKaitiStd-Regular.otf");
-}
-
-html {
-    font-family: Monaco;
-}
-
-h1.title {
-    text-align: left;
 }
 
 body {
@@ -62,120 +36,17 @@ a {
     text-decoration: none;
 }
 
-div.outline-2 {
-    margin-top: 50px;
-}
-
-section.bio {
-    display: flex;
-    align-items: center;
-}
-
-div.bio-left img {
-    width: 230px;
-}
-
-.avatar img {
-    clip-path: circle(106px at 114px 114px);
-}
-
-div.avatar {
-    clip-path: circle(113px at 114px 114px);
-    background: #607D8B;
-}
-
-div.nju img {
-    width: 50px;
-}
-
-div.nju {
-    height: 0px;
-    position: relative;
-    left: 158px;
-    top: 177px;
-    z-index: 1;
-}
-
-.links {
-    display: flex;
-}
-
-.links a {
-    flex: auto;
-}
-
-.links a i {
-    width: -webkit-fill-available;
-}
-
-.links a i:before {
-    width: -webkit-fill-available;
-    text-align: center;
-    display: block;
-}
-
-
-div.bio-left {
-    float: left;
-}
-
-h2#chinese-name {
-    font-size: 50px;
-    font-family: Kaiti;
-}
-
-div.bio-right {
-    display: inline-block;
-    max-width: calc(100% - 250px);
-    margin-left: 20px;
-}
-
-.bio-right .outline-2{
-    margin-top: 0px;
-}
-.bio-right h2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-
-@media (max-width: 860px) {
-    div.bio-left {
-        visibility: hidden;
-        width: 0;
-    }
-    div.bio-right {
-        display: block;
-        max-width: inherit;
-        margin-left: auto;
-    }
-}
-
-table {
-    margin-left: 20px;
-    margin-right: 0px;
-    border-top-style: hidden;
-    border-bottom-style: hidden;
-    border-left-style: hidden;
-    border-right-style: hidden;
-    min-width: -webkit-fill-available;
-}
-
-td.org-left {
-    display: list-item;
-}
-
-#postamble, .validation a {
-    color: rgba(0,0,0,0);
-}
+/* ------------------------ publication -----------------------------  */
 
 .pub-title, .coauthors {
-    margin: 0px;
+    margin: 1px;
 }
 
 .pub-info {
     display: flex;
     align-items: center;
 }
+
 
 .pub-links {
     margin-left: auto;
@@ -185,16 +56,17 @@ td.org-left {
 .pub-link {
     color: black;
     background-color:rgb(230, 230, 230);
-    border-radius: 3px; 
+    border-radius: 4px; 
     margin-left: 3px;
-    padding:2px;
-    font-size: 14px;
+    padding:3px;
+    font-size: 15px;
 }
 
 .pub-intro {
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
+    padding:12px;
 }
 
 .coauthors, .pub-info, .pub-intro {
@@ -203,31 +75,35 @@ td.org-left {
 }
 
 .pub-summary {
-    font-family: TexGyre-bold;
     font-size: 20px;
 }
 
 .coauthors, .pub-info, .pub-intro {
-    font-family: Monaco;
     font-size: 17px;
 }
 
-.C {
+
+.C { /* color for conference paper */
     color:tomato;
 }
 
-.J {
+.J { /* color for journal paper */
     color:deeppink;
 }
 
-.M {
+.M { /* color for manuscript */
     color:cornflowerblue;
 }
 
-.pub-item {
-    margin-top: 15px;
+.pub-item { /* space between two items */
+    margin-top: 16px;
 }
 
-.org-right {
-    text-align: right;
+
+
+/* -------------------------------------------------------------------  */
+
+.notice {
+    font-size: 15px;
+    color: red;
 }
