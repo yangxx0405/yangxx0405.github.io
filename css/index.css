@@ -13,6 +13,21 @@
   src: url("../font/Sedan/Sedan-Regular.ttf");
 }
 
+/* ------------------------ header -----------------------  */
+
+.navbar-brand {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: black;
+    font-size: 130%;
+  }
+
+.nav-link {
+    font-weight: 600;
+    color: black;
+    font-size: 100%;
+}
+
 
 /* -------------------------- body -----------------------  */
 
@@ -36,7 +51,6 @@ main {
     padding-right: 50px;
     padding-left: 50px;
 }
-
 
 
 /* -------------------------- footer -----------------------  */
@@ -76,14 +90,12 @@ footer {
 H1 { 
     font-variant: small-caps;
     font-size: 280%; 
-    margin-bottom: 0ex; 
+    margin-bottom: 1.5ex; 
     margin-top: 1.5ex; 
     padding-left: 0em;
     color: #000000; 
     text-align: center; 
 }
-
-
 
 
 /* ------------------------ publication -----------------------------  */
@@ -113,6 +125,7 @@ H1 {
 }
 
 .pub-intro {
+    margin-top: 5px;
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
@@ -160,10 +173,4 @@ H1 {
 
 /* -------------------------------------------------------------------  */
 
-.navbar-brand {
-    font-variant: small-caps;
-    font-weight: bold;
-    color: black;
-    font-size: 130%;
-  }
 
