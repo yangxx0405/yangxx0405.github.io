@@ -56,7 +56,24 @@ footer {
 }
 
 
-/* H1 { 
+/* -------------------------- section -----------------------  */
+
+.container_section {
+    display: flex;
+}
+
+.section-title {
+    width: 100px;
+}
+
+.section-content {
+    flex: 1;
+}
+
+/* -------------------------- head -----------------------  */
+
+
+H1 { 
     font-variant: small-caps;
     font-size: 280%; 
     margin-bottom: 0ex; 
@@ -64,7 +81,7 @@ footer {
     padding-left: 0em;
     color: #000000; 
     text-align: center; 
-} */
+}
 
 
 
