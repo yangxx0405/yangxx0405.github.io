@@ -74,10 +74,11 @@ footer {
 
 .container_section {
     display: flex;
+    margin-top: 60px;
 }
 
 .section-title {
-    width: 100px;
+    width: 400px;
 }
 
 .section-content {
