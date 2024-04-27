@@ -48,8 +48,8 @@ main {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 
@@ -180,3 +180,6 @@ XiaoWei {
 /* -------------------------------------------------------------------  */
 
 
+a {
+    text-decoration: none;
+}
