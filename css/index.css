@@ -1,16 +1,16 @@
 @font-face {
     font-family: "XiaoWei";
-    src: url("../font/ZCOOLXiaoWei-Regular.ttf");
+    src: url("../fonts/ZCOOLXiaoWei-Regular.ttf");
 }
 
 @font-face {
     font-family: "Jersey15";
-    src: url("../font/Jersey15-Regular.ttf");
+    src: url("../fonts/Jersey15-Regular.ttf");
 }
 
 @font-face {
   font-family: "Sedan";
-  src: url("../font/Sedan/Sedan-Regular.ttf");
+  src: url("../fonts/Sedan/Sedan-Regular.ttf");
 }
 
 /* ------------------------ header -----------------------  */
