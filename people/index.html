@@ -17,6 +17,7 @@
 
   <!-- local scripts -->
   <script src="../script/pub-item.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <!-- Local CSS -->
   <link rel="stylesheet" type="text/css" href="../css/index.css" />
@@ -48,7 +49,8 @@
               <a class="nav-link active" aria-current="page" href="#" target="_self">People</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Hobbies
               </a>
               <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
@@ -71,50 +73,64 @@
   <main>
     <h1 style="padding-top: 40pt;"> Mentors </h1>
     <div class="container">
-        <p style="font-size: 18px; margin-top: 10px;">
-            I always have the utmost respect for Prof. <a href="https://scholar.google.com/citations?user=nUf0DskAAAAJ">Zhiguo Fu</a>, 
-            who guided me into the world of scientific research
-            and introduced me to the fascinating field of theoretical computer science 
-            during my undergraduate studies at Northeast Normal University.
-        </p>
-        <p style="font-size: 18px; margin-top: 5px;">
-            I was also immensely fortunate to receive guidance from and work with the following professors:
-            <div style="font-size: 18px;">
-                <ul >
-                    <li>Prof. <a href="https://jie-xue.github.io/">Jie Xue</a> (New York University Shanghai)</li>
-                    <li>Prof. <a href="https://tcs.nju.edu.cn/yinyt/">Yitong Yin</a> (Nanjing University)</li>
-                </ul>
-            </div>
-            
-        </p>
+      <p style="font-size: 18px; margin-top: 10px;">
+        I always have the utmost respect for Prof. <a
+          href="https://scholar.google.com/citations?user=nUf0DskAAAAJ">Zhiguo Fu</a>,
+        who guided me into the world of scientific research
+        and introduced me to the fascinating field of theoretical computer science
+        during my undergraduate studies at Northeast Normal University.
+      </p>
+      <p style="font-size: 18px; margin-top: 5px;">
+        I was also immensely fortunate to receive guidance from and work with the following professors:
+      <div style="font-size: 18px;">
+        <ul>
+          <li>Prof. <a href="https://jie-xue.github.io/">Jie Xue</a> (New York University Shanghai)</li>
+          <li>Prof. <a href="https://tcs.nju.edu.cn/yinyt/">Yitong Yin</a> (Nanjing University)</li>
+        </ul>
+      </div>
+
+      </p>
     </div>
     <h1 style="padding-top: 10pt;"> Collaborators </h1>
     <div class="container">
-        <p style="font-size: 18px; margin-top: 10px;">
-            I've written papers with the following 4 excellent collaborators:
-        </p>
-        <p style="font-size: 18px; margin-top: 5px;">
-            <a href="https://chenxiaoyu233.github.io/info/">Xiaoyu Chen</a>,
-            Tianyu Liu,
-            <a href="http://tcs.nju.edu.cn/yinyt/">Yitong Yin</a>,
-            <a href="https://sites.google.com/view/xinyuanzhang">Xinyuan Zhang</a>
-        </p>
+      <p style="font-size: 18px; margin-top: 10px;">
+        I've written papers with the following 7 excellent collaborators:
+      </p>
+      <p style="font-size: 18px; margin-top: 5px;">
+        <a href="https://chenxiaoyu233.github.io/info/">Xiaoyu Chen</a>,
+        Tianyu Liu,
+        <a href="https://sites.cs.ucsb.edu/~suri/">Subhash Suri</a>,
+        <a href="https://jie-xue.github.io/">Jie Xue</a>,
+        <a href="http://tcs.nju.edu.cn/yinyt/">Yitong Yin</a>,
+        <a href="https://sites.google.com/view/xinyuanzhang">Xinyuan Zhang</a>,
+        Jiumu Zhu
+      </p>
+    </div>
+
+    <h1 style="padding-top: 10pt;"> Erdös Number (Beta) </h1>
+    <div class="container">
+      <div id="erdosgraph" class="erdosgraph">
+        <div id="info-box" class="info-box">
+          <p id="edge-info">Click an edge to see the first co-authored paper of this two people.</p>
+        </div>
+
+      </div>
     </div>
 
     <h1 style="padding-top: 10pt;"> Friends </h1>
     <div class="container">
-        <p style="font-size: 18px; margin-top: 10px;">
-          Below are links to the homepages or blogs of some of my friends and fields they are interested.
-        </p>
-        <div style="font-size: 18px;">
-          <ul >
-              <li> <a href="https://jiuzhengwang.github.io/">Jiuzheng Wang</a> (computer systems and software)</li>
-              <li> <a href="https://dem1tasse.github.io/">Ruohan (Demi) Wang</a> (NLP, LLMs, and Language Agents)</li>
-          </ul>
+      <p style="font-size: 18px; margin-top: 10px;">
+        Below are links to the homepages or blogs of some of my friends and fields they are interested.
+      </p>
+      <div style="font-size: 18px;">
+        <ul>
+          <li> <a href="https://jiuzhengwang.github.io/">Jiuzheng Wang</a> (computer systems and software)</li>
+          <li> <a href="https://dem1tasse.github.io/">Ruohan (Demi) Wang</a> (NLP, LLMs, and Language Agents)</li>
+        </ul>
       </div>
     </div>
-    
-    
+
+
 
 
   </main>
@@ -124,7 +140,7 @@
   <footer>
     <div class="container_footer">
       ©Copyright 2024 Xiongxin Yang. <br>
-      Last updated: Nov. 23, 2024. <br>
+      Last updated: Dec. 4, 2024. <br>
       <a href="../acknowledgement/">Acknowledgement.</a>
     </div>
   </footer>
@@ -135,6 +151,216 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
+
+  <script>
+    const graph = {
+      nodes: [
+        { id: "Erdos", name: "Paul Erdös", erdosNumber: 0 },
+        { id: "Alon", name: "Noga Alon", erdosNumber: 1 },
+        { id: "Aronov", name: "Boris Aronov", erdosNumber: 1 },
+        { id: "Moran", name: "Shlomo Moran", erdosNumber: 1 },
+        { id: "Pollack", name: "Richard M. Pollack", erdosNumber: 1 },
+        { id: "Yao", name: "Frances Foong Yao", erdosNumber: 1 },
+        { id: "Suri", name: "Subhash Suri", erdosNumber: 2 },
+        { id: "You", name: "Me", erdosNumber: 3 },
+      ],
+      links: [
+        {
+          source: "Erdos", target: "Aronov",
+          papers:
+            "BORIS ARONOVL, PAUL ERDÖS, Wayne Goddard, and Daniel J. Kleitman, Michael Klugerman, János Pach, and Leonard J. Schulman <br>\
+              <b> Crossing Families </b> <br>\
+              In <i> Proceedings of the seventh annual symposium on Computational geometry (SCG 1991) </i>."
+
+        },
+        {
+          source: "Erdos", target: "Alon",
+          papers:
+            "NOGA ALON and PAUL ERDÖS. <br>\
+              <b> An Application of Graph Theory to Additive Number Theory </b> <br>\
+              <i> European Journal of Combinatorics 6.3 (1985): 201-203 </i>."
+        },
+        {
+          source: "Erdos", target: "Pollack",
+          papers:
+            "PAUL ERDÖS, János Pach, Ronald Graham, RICHARD M. POLLACK, and Zsolt Tuza. <br>\
+              <b> Radius, Diameter, and Minimum Degree. </b> <br>\
+              <i> Journal of Combinatorial Theory, Series B 47.1 (1989): 73-79 </i>."
+        },
+        {
+          source: "Erdos", target: "Yao",
+          papers:
+            "Fan Chung, PAUL ERDÖS, Ronald Graham, and FRANCES FOONG YAO. <br>\
+              <b> Minimal Decompositions of Two Graphs into Pairwise Isomorphic Subgraphs. </b> <br>\
+              In <i> Proceedings of 10th Southeastern International Conference on Combinatorics, Graph Theory and Computing (SEICCGTC 1979) </i>."
+        },
+        {
+          source: "Erdos", target: "Moran",
+          papers:
+            "PAUL ERDÖS, Nathan Linial, and SHOLMO MORAN. <br>\
+              <b> Extremal Problems on Permutations Under Cyclic Equivalence. </b> <br>\
+              <i> Discrete mathematics 64.1 (1987): 1-11 </i>."
+        },
+        {
+          source: "Alon", target: "Suri",
+          papers:
+            "Pankaj K. Agarwal, NOGA ALON, Boris Aronov, and SUBHASH SURI. <br>\
+              <b> Can Visibility Graphs be Represented Compactly? </b> <br>\
+              In <i> Proceedings of the ninth annual symposium on Computational geometry (SCG 1993) </i>." },
+        {
+          source: "Pollack", target: "Suri",
+          papers:
+            "William J. Lenhart, RICHARD M. POLLACK, Jörg-Rüdiger Sack, Raimund Seidel, Micha Sharir, SUBHASH SURI, Godfried T. Toussaint, Sue Whitesides, and Chee-Keng Yap. <br>\
+              <b> Computing the Link Center of a Simple Polygon. </b> <br>\
+              In <i> Proceedings of the third annual symposium on Computational geometry (SCG 1987) </i>." },
+        {
+          source: "Aronov", target: "Suri",
+          papers:
+            "Pankaj K. Agarwal, BORIS ARONOV, Micha Sharir, and SUBHASH SURI. <br>\
+              <b> Selecting Distances in the Plane. </b> <br>\
+              In <i> Proceedings of the sixth annual symposium on Computational geometry (SCG 1990) </i>."
+        },
+        {
+          source: "Yao", target: "Suri",
+          papers:
+            "Clyde L. Monma, Mike Paterson, SUBHASH SURI, and FRANCES FOONG YAO. <br>\
+              <b> Computing Euclidean Maximum Spanning Trees. </b> <br>\
+              In <i> Proceedings of the fourth annual symposium on Computational geometry (SCG 1988) </i>."
+        },
+        {
+          source: "Moran", target: "Suri",
+          papers:
+            "Alok Aggarwal, SHOLMO MORAN, Peter W. Shor, and SUBHASH SURI. <br>\
+              <b> Computing the Minimum Visible Vertex Distance Between Two Polygons: Preliminar Version </b> <br>\
+              In <i> Algorithms and Data Structures: Workshop (WADS 1989) </i>."
+        },
+        {
+          source: "Suri", target: "You", papers:
+            "SUBHASH SURI, Jie Xue, XIONGXIN YANG, and Jiumu Zhu. <br>\
+              <b> Dynamic MaximumDepthof Geometric Objects </b> <br>\
+              <i> prepint (2024)</i>." },
+      ],
+    };
+
+    const width = 800;  // 90% of the screen width
+    const height = 400;  // 60% of the screen height
+
+    const svg = d3
+      .select("#erdosgraph")
+      .append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("viewBox", `0 0 ${width} ${height}`)  // 使用 viewBox 让整个图保持在视口内 \
+      .attr("style", "display: block; margin: 0 auto;");
+
+    // 设置初始节点位置（左右顺序反转）
+    const xSpacing = 250; // 每层横向间隔
+    const erdosGroup = d3.group(graph.nodes, d => d.erdosNumber);
+
+    erdosGroup.forEach((nodes, erdosNumber) => {
+      const layerCount = nodes.length;
+      const layerHeight = (layerCount - 1) * 80; // 每个节点之间间隔 50
+      const startY = (height - layerHeight) / 2; // 居中计算起始 y 坐标
+
+      nodes.forEach((node, index) => {
+        node.x = width - (erdosNumber * xSpacing + 100); // 横向按 Erdős 数反转排序
+        node.y = startY + index * 80; // 垂直居中排列
+      });
+    });
+
+    // 力导向图
+    const simulation = d3
+      .forceSimulation(graph.nodes)
+      .force("link", d3.forceLink(graph.links).id(d => d.id).distance(100))
+      .force("charge", d3.forceManyBody().strength(-300))
+      .force("x", d3.forceX(d => d.x).strength(1)) // 固定初始位置
+      .force("y", d3.forceY(d => d.y).strength(1)) // 固定初始位置
+      .alphaDecay(0.05); // 缓慢收敛
+
+    // 绘制边
+    const link = svg
+      .selectAll(".link")
+      .data(graph.links)
+      .enter()
+      .append("line")
+      .attr("class", "link")
+      .attr("stroke-width", 2)
+      .on("click", (event, d) => {
+        // 更新信息框内容
+        d3.select("#edge-info").html(
+          `<p>The first co-authored paper of ${d.source.name} and ${d.target.name}: </p> ${d.papers} `
+        );
+      });
+
+    // 绘制节点
+    const node = svg
+      .selectAll(".node")
+      .data(graph.nodes)
+      .enter()
+      .append("circle")
+      .attr("class", "node")
+      .attr("r", 15)
+      .attr("fill", d => {
+        switch (d.erdosNumber) {
+          case 0:
+            return "#FFD700"; // Erdős
+          case 1:
+            return "#1f77b4";
+          case 2:
+            return "#ff7f0e";
+          default:
+            return "#2ca02c";
+        }
+      })
+      .call(
+        d3
+          .drag()
+          .on("start", dragStarted)
+          .on("drag", dragged)
+          .on("end", dragEnded)
+      );
+
+    // 添加文字标签
+    const label = svg
+      .selectAll(".label")
+      .data(graph.nodes)
+      .enter()
+      .append("text")
+      .attr("dy", -15)
+      .attr("text-anchor", "middle")
+      .text(d => d.name);
+
+    // 力导向图更新
+    simulation.on("tick", () => {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+
+      node.attr("cx", d => d.x).attr("cy", d => d.y);
+
+      label.attr("x", d => d.x).attr("y", d => d.y);
+    });
+
+    // 拖拽行为
+    function dragStarted(event, d) {
+      if (!event.active) simulation.alphaTarget(0.3).restart();
+      d.fx = d.x;
+      d.fy = d.y;
+    }
+
+    function dragged(event, d) {
+      d.fx = event.x;
+      d.fy = event.y;
+    }
+
+    function dragEnded(event, d) {
+      if (!event.active) simulation.alphaTarget(0);
+      d.fx = null;
+      d.fy = null;
+    }
+  </script>
 
 </body>
 

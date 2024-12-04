@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: "Sedan";
-  src: url("../fonts/Sedan/Sedan-Regular.ttf");
+    font-family: "Sedan";
+    src: url("../fonts/Sedan/Sedan-Regular.ttf");
 }
 
 /* ------------------------ header -----------------------  */
@@ -20,7 +20,7 @@
     font-weight: bold;
     color: black;
     font-size: 130%;
-  }
+}
 
 .nav-link {
     font-weight: 600;
@@ -49,7 +49,7 @@ body {
     font-family: Sedan;
 }
 
-body > *{
+body>* {
     width: 100vw;
 }
 
@@ -101,14 +101,14 @@ footer {
 /* -------------------------- head -----------------------  */
 
 
-H1 { 
+H1 {
     font-variant: small-caps;
-    font-size: 280%; 
-    margin-bottom: 1.5ex; 
-    margin-top: 1.5ex; 
+    font-size: 280%;
+    margin-bottom: 1.5ex;
+    margin-top: 1.5ex;
     padding-left: 0em;
-    color: #000000; 
-    text-align: center; 
+    color: #000000;
+    text-align: center;
 }
 
 
@@ -127,7 +127,8 @@ XiaoWei {
 
 /* ------------------------ publication -----------------------------  */
 
-.pub-title, .coauthors {
+.pub-title,
+.coauthors {
     margin: 1px;
 }
 
@@ -144,10 +145,10 @@ XiaoWei {
 
 .pub-link {
     color: black;
-    background-color:rgb(230, 230, 230);
-    border-radius: 4px; 
+    background-color: rgb(230, 230, 230);
+    border-radius: 4px;
     margin-left: 3px;
-    padding:3px;
+    padding: 3px;
     font-size: 15px;
 }
 
@@ -156,10 +157,12 @@ XiaoWei {
     border-style: solid;
     border-width: 2px;
     border-radius: 5px;
-    padding:12px;
+    padding: 12px;
 }
 
-.coauthors, .pub-info, .pub-intro {
+.coauthors,
+.pub-info,
+.pub-intro {
     margin-left: 22px;
     margin-right: 18px;
 }
@@ -168,33 +171,39 @@ XiaoWei {
     font-size: 20px;
 }
 
-.coauthors, .pub-info, .pub-intro {
+.coauthors,
+.pub-info,
+.pub-intro {
     font-size: 17px;
 }
 
 
-.C { /* color for conference paper */
-    color:tomato;
+.C {
+    /* color for conference paper */
+    color: tomato;
 }
 
-.J { /* color for journal paper */
-    color:deeppink;
+.J {
+    /* color for journal paper */
+    color: deeppink;
 }
 
-.M { /* color for manuscript */
-    color:cornflowerblue;
+.M {
+    /* color for manuscript */
+    color: rgb(27, 77, 168);
 }
 
-.pub-item { /* space between two items */
+.pub-item {
+    /* space between two items */
     margin-top: 16px;
 }
 
 Jpaper {
-    color:deeppink;
+    color: deeppink;
 }
 
 Cpaper {
-    color:tomato;
+    color: tomato;
 }
 
 /* -------------------------------------------------------------------  */
@@ -209,9 +218,38 @@ Cpaper {
 
 a {
     text-decoration: none;
-    color: #A7BEC6; 
+    color: #A7BEC6;
 }
 
-.imgshadow{
+.imgshadow {
     box-shadow: 2px 2px 5px #000;
+}
+
+
+.erdosgraph .node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.erdosgraph .link {
+    stroke: #999;
+    stroke-opacity: 0.6;
+    stroke-width: 3.5px;
+    cursor: pointer;
+}
+
+.erdosgraph .info-box {
+    width: 500px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.erdosgraph .info-box h3 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #333;
 }
