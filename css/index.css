@@ -40,6 +40,10 @@ flex-grow
 flex-shrink
 flex-basis */
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 body {
     overflow-x: hidden;
@@ -47,29 +51,23 @@ body {
     display: flex;
     flex-direction: column;
     font-family: Sedan;
+    margin: 0;
+    padding: 0;
 }
-
-body>* {
-    width: 100vw;
-}
-
 
 /* -------------------------- main -----------------------  */
 
 main {
+    box-sizing: border-box;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
-    padding-right: 1em;
-    padding-left: 1em;
 }
-
 
 /* -------------------------- footer -----------------------  */
 
 footer {
     flex-shrink: 0;
-    margin-top: 50px;
     background-color: #EcE6E6;
     color: black;
     width: 100%;
@@ -84,6 +82,11 @@ footer {
 
 
 /* -------------------------- section -----------------------  */
+
+container{
+    padding-right: 2em;
+    padding-left: 2em;
+}
 
 .container_section {
     display: flex;
@@ -117,12 +120,32 @@ XiaoWei {
 
 }
 
+
+/* -------------------------- paragraph -----------------------  */
+
+.normal-text {
+    font-size: 19px;
+    margin-top: 10px;
+  }
+
+/* -------------------------- icon -----------------------  */
+
+.icon {
+    font-size: 40px;
+    margin: 0 5px;  /* 左右各10px间距 */
+  }
+
 /* ------------------------ news -----------------------------  */
 
 .news {
     margin-top: 10px;
     font-size: 19px;
 }
+
+.news dt {
+    display: inline;
+    font-weight: bold;
+  }
 
 
 /* ------------------------ publication -----------------------------  */
@@ -213,7 +236,7 @@ Cpaper {
     color: red;
 }
 
-/* -------------------------------------------------------------------  */
+/* --------------------------- link -----------------------------------  */
 
 
 a {
@@ -221,10 +244,13 @@ a {
     color: #A7BEC6;
 }
 
+/* -------------------------- img --------------------------------  */
+
 .imgshadow {
     box-shadow: 2px 2px 5px #000;
 }
 
+/* ---------------------- erdosgraph -----------------------------  */
 
 .erdosgraph .node {
     stroke: #fff;
@@ -238,8 +264,7 @@ a {
     cursor: pointer;
 }
 
-.erdosgraph .info-box {
-    width: 500px;
+.info-box {
     padding: 10px;
     margin: 0 auto;
     border: 1px solid #ccc;

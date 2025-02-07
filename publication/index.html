@@ -17,6 +17,7 @@
 
   <!-- local scripts -->
   <script src="../script/pub-item.js"></script>
+  <script src="../script/navbar.js" defer></script>
 
   <!-- Local CSS -->
   <link rel="stylesheet" type="text/css" href="../css/index.css" />
@@ -29,41 +30,8 @@
 <body>
 
   <header>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light" style="background-color: #EcE6E6;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../" target="_self">Xiongxin Yang</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href=../ target="_self">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" target="_self">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href=../people/ target="_self">People</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Hobbies
-              </a>
-              <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="../reading/">Reading</a></li>
-                <li><a class="dropdown-item" href="#">Music</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+    <div id="navbar-container"></div>
   </header>
-
-
 
 
 
@@ -81,7 +49,7 @@
               { name: "Jie Xue", link: "https://jie-xue.github.io/" },
               { name: "Jiumu Zhu", link: "" },
             ],
-            JC: { category: "M", name: "Submitted" },
+            JC: { category: "C", name: "SoCG 2025" },
             links: [
 
             ],
@@ -101,6 +69,7 @@
             JC: { category: "C", name: "SODA 2025" },
             links: [
               { name: "arXiv", link: "https://arxiv.org/abs/2404.04668" },
+              { name: "DOI", link: "https://doi.org/10.1137/1.9781611978322.183" },
             ],
             intro: "TBA."
           };
@@ -125,23 +94,35 @@
           add_pub(table);
         </script>
 
-
       </div>
     </div>
-    <h1 style="padding-top: 30pt;"> Services </h1>
-    <div class="container">
-      <ul style="font-size: 20px">
-        <li>Reviewer for: <a href="https://socg25.github.io/socg.html">SoCG 2025</a></li>
-      </ul>
+
+
+    <div style="background:rgb(248, 248, 248); margin-top:20pt">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div>
+              <h1>Services </h1>
+            </div>
+          </div>
+          <div class="col">
+            <ul style="font-size: 20px">
+              <li>Reviewer for: <a href="https://socg25.github.io/socg.html">SoCG 2025</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+    
   </main>
 
 
   <!-- Footer -->
   <footer>
     <div class="container_footer">
-      ©Copyright 2024 Xiongxin Yang. <br>
-      Last updated: Dec. 15, 2024. <br>
+      ©Copyright 2025 Xiongxin Yang. <br>
+      Last updated: Feb. 7, 2025. <br>
       <a href="../acknowledgement/">Acknowledgement.</a>
     </div>
   </footer>

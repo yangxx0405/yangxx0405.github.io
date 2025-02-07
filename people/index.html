@@ -18,6 +18,7 @@
   <!-- local scripts -->
   <script src="../script/pub-item.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="../script/navbar.js" defer></script>
 
   <!-- Local CSS -->
   <link rel="stylesheet" type="text/css" href="../css/index.css" />
@@ -30,39 +31,7 @@
 <body>
 
   <header>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light" style="background-color: #EcE6E6;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../" target="_self">Xiongxin Yang</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" href=../ target="_self">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href=../publication/ target="_self">Publications</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#" target="_self">People</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Hobbies
-              </a>
-              <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="../reading/">Reading</a></li>
-                <li><a class="dropdown-item" href="#">Music</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+    <div id="navbar-container"></div>
   </header>
 
 
@@ -88,50 +57,87 @@
           <li>Prof. <a href="https://tcs.nju.edu.cn/yinyt/">Yitong Yin</a> (Nanjing University)</li>
         </ul>
       </div>
+      </p>
+    </div>
 
-      </p>
-    </div>
-    <h1 style="padding-top: 10pt;"> Collaborators </h1>
-    <div class="container">
-      <p style="font-size: 18px; margin-top: 10px;">
-        I've written papers with the following 7 excellent collaborators:
-      </p>
-      <p style="font-size: 18px; margin-top: 5px;">
-        <a href="https://chenxiaoyu233.github.io/info/">Xiaoyu Chen</a>,
-        Tianyu Liu,
-        <a href="https://sites.cs.ucsb.edu/~suri/">Subhash Suri</a>,
-        <a href="https://jie-xue.github.io/">Jie Xue</a>,
-        <a href="http://tcs.nju.edu.cn/yinyt/">Yitong Yin</a>,
-        <a href="https://sites.google.com/view/xinyuanzhang">Xinyuan Zhang</a>,
-        Jiumu Zhu
-      </p>
-    </div>
-<!-- 
-    <h1 style="padding-top: 10pt;"> Erdös Number (Beta) </h1>
-    <div class="container">
-      <div id="erdosgraph" class="erdosgraph">
-        <div id="info-box" class="info-box">
-          <p id="edge-info">Click an edge to see the first co-authored paper of this two people.</p>
+    <div style="background:rgb(248, 248, 248); margin-top:20pt">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div>
+              <h1> Collaborators </h1>
+              <p align="center">
+                I've written papers with 7 excellent collaborators.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <p style="font-size: 18px; margin-top: 5px;">
+              <a href="https://chenxiaoyu233.github.io/info/">Xiaoyu Chen</a>,
+              Tianyu Liu,
+              <a href="https://sites.cs.ucsb.edu/~suri/">Subhash Suri</a>,
+              <a href="https://jie-xue.github.io/">Jie Xue</a>,
+              <a href="http://tcs.nju.edu.cn/yinyt/">Yitong Yin</a>,
+              <a href="https://sites.google.com/view/xinyuanzhang">Xinyuan Zhang</a>,
+              Jiumu Zhu
+            </p>
+          </div>
         </div>
-
       </div>
-    </div> -->
-
-    <h1 style="padding-top: 10pt;"> Friends </h1>
-    <div class="container">
-      <p style="font-size: 18px; margin-top: 10px;">
-        Below are links to the homepages or blogs of some of my friends and fields they are interested:
-
-      </p>
-      <p style="font-size: 18px; margin-top: 5px;">
-        <a href="https://jiuzhengwang.github.io/">Jiuzheng Wang</a> (Computer Systems and Software),
-        <a href="https://dem1tasse.github.io/">Ruohan (Demi) Wang</a> (NLP, LLMs, and Language Agents),
-        <a href="https://janetyin.github.io/">Zhenyun Yin</a> (Type Theory)
-      </p>
     </div>
 
+    <div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div>
+              <h1> Erdös Number </h1>
+              <!-- <p align="center"> <a href="https://en.wikipedia.org/wiki/Erd%C5%91s_number"> [What is it?]</a></p> -->
+              <p align="center">
+                My Erdös number is 3.
+              </p>
 
 
+              <div align="center" id="info-box" class="info-box">
+              <p align="left" style="font-size: 15px; margin-top: 5px;" id="edge-info"> I visualize all the collaboration paths (that I can find) from me to Erdös.
+                These data are from <a href="https://sites.google.com/oakland.edu/grossman/home/the-erdoes-number-project">The Erdös Number Project</a>.
+                Click an edge to see the first co-authored paper of this two people.</p>
+              </div>
+
+            </div>
+          </div>
+          <div class="col">
+            <div id="erdosgraph" class="erdosgraph">
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgb(248, 248, 248); margin-top:20pt">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <div>
+              <h1> Friends </h1>
+              <p align="center">
+                Here are some links to my friends and fields they are interested in.
+              </p>
+            </div>
+          </div>
+          <div class="col">
+            <div style="font-size: 18px;">
+              <ul>
+                <li><a href="https://jiuzhengwang.github.io/">Jiuzheng Wang</a> (Computer Systems and Software)</li>
+                <li><a href="https://dem1tasse.github.io/">Ruohan (Demi) Wang</a> (NLP, LLMs, and Language Agents)</li>
+                <li><a href="https://janetyin.github.io/">Zhenyun Yin</a> (Type Theory)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
@@ -152,7 +158,7 @@
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
 
-  <!-- <script>
+  <script>
     const graph = {
       nodes: [
         { id: "Erdos", name: "Paul Erdös", erdosNumber: 0 },
@@ -238,20 +244,22 @@
           source: "Suri", target: "You", papers:
             "SUBHASH SURI, Jie Xue, XIONGXIN YANG, and Jiumu Zhu. <br>\
               <b> Dynamic Maximum Depth of Geometric Objects </b> <br>\
-              <i> prepint (2024)</i>." },
+              In <i> International Symposium on Computational Geometry (SoCG 2025) </i>." },
       ],
     };
 
     const width = 800;
-    const height = 400; 
+    const height = 400;
 
     const svg = d3
       .select("#erdosgraph")
       .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("viewBox", `0 0 ${width} ${height}`)  // 使用 viewBox 让整个图保持在视口内 \
-      .attr("style", "display: block; margin: 0 auto;");
+      .attr("width", "100%")  // 让 SVG 充满容器
+      .attr("height", "100%") // 让 SVG 充满容器
+      .attr("viewBox", `0 0 ${width} ${height}`)
+      .attr("preserveAspectRatio", "xMidYMid meet")
+      .style("display", "block")
+      .style("margin", "0 auto");
 
     // 设置初始节点位置（左右顺序反转）
     const xSpacing = 250; // 每层横向间隔
@@ -277,6 +285,8 @@
       .force("y", d3.forceY(d => d.y).strength(1)) // 固定初始位置
       .alphaDecay(0.05); // 缓慢收敛
 
+    let lastClickedLink = null;
+
     // 绘制边
     const link = svg
       .selectAll(".link")
@@ -284,12 +294,21 @@
       .enter()
       .append("line")
       .attr("class", "link")
-      .attr("stroke-width", 2)
-      .on("click", (event, d) => {
+      .attr("stroke-width", 3)
+      .on("click", function (event, d) {
         // 更新信息框内容
         d3.select("#edge-info").html(
           `<p>The first co-authored paper of ${d.source.name} and ${d.target.name}: </p> ${d.papers} `
         );
+
+        // 恢复上一次点击的边颜色
+        if (lastClickedLink) {
+          d3.select(lastClickedLink).style("stroke", "#999");
+        }
+
+        // 变更当前点击的边颜色
+        d3.select(this).style("stroke", "red");
+        lastClickedLink = this;
       });
 
     // 绘制节点
@@ -360,7 +379,7 @@
       d.fx = null;
       d.fy = null;
     }
-  </script> -->
+  </script>
 
 </body>
 
