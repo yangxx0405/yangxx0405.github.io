@@ -70,7 +70,7 @@ function gen_pub_item(table) {
         authors.appendChild(document.createTextNode(pre_text));
 
         author = table.authors[i];
-        template_author = `<a href="${author.link}">${author.name}</a>`;
+        template_author = `<a href="${author.link}" style="color: black;">${author.name}</a>`;
         if (author.link == "") template_author = `<a>${author.name}</a>`;
         author_item = html_to_element(template_author);
         authors.appendChild(author_item);
