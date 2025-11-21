@@ -1,109 +1,150 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
-
-  <!-- Meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Xiongxin Yang">
+  <title>News Archives | Xiongxin Yang</title>
 
-  <!-- Bootstrap CSS -->
-  <!-- Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load CSS. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/academicons.css">
 
-  <!-- local scripts -->
-  <script src="../script/pub-item.js"></script>
-  <script src="../script/navbar.js" defer></script>
-
-  <!-- Local CSS -->
-  <link rel="stylesheet" type="text/css" href="../css/index.css" />
-
-  <!-- Title -->
-  <title>Xiongxin Yang</title>
-
+  <script src="../script/pub-item.js" defer></script>
 </head>
 
 <body>
 
   <header>
-    <div id="navbar-container"></div>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="../">Xiongxin Yang</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../publication/">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../people/">People</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <h1 style="font-size: 35px;padding-top: 40pt;"> News Archives </h1>
-
+    <div class="container mt-5 pt-5 mb-4">
+      <h1 class="border-bottom pb-3 text-center", style="font-variant: small-caps;">News Archives</h1>
+    </div>
 
     <div class="container">
-      <dl class="news">
-        <dt> [Sept. 8, 2025] </dt>
-        Started the new journey in Santa Barbara! &#128747
-        <br><br>
-        <dt> [Jun. 28, 2025] </dt>
-        I attended the <a href="https://socg25.github.io/" style="color: tomato;">SoCG 2025</a> at Kanazawa, Japan,
-        where I also gave a talk about dynamic maximum depth of geometric objects. This is my first time to attend a international conference! &#129395
-        <br><br>
-        <dt> [Jun. 18, 2025] </dt>
-        We translated <i>The Art of Computer Programming Volume 4B: Combinatorial Algorithms, Part 2</i> into the Chinese version <XiaoWei>《计算机程序设计艺术 卷4B：组合算法（二）》</XiaoWei>. 
-        The book has now been published by Posts & Telecommunications Press! &#129321
-        <br><br>
-        <dt> [May 31, 2025] </dt>
-        I gave a talk about dynamic maximum depth of geometric objects at <a href="https://conference.cs.cityu.edu.hk/aaac2025/" style="color: tomato;">AAAC 2025</a>,
-        which was my first talk in English at a workshop.
-        <br><br>
-        <dt> [Mar. 29, 2025] </dt>
-        I will give talks about dynamic maximum depth of geometric objects at <a href="https://conference.cs.cityu.edu.hk/aaac2025/" style="color: tomato;">AAAC 2025</a> (at Hong Kong) and <a href="https://socg25.github.io/" style="color: tomato;">SoCG 2025</a> (at Kanazawa, Japan).
-        <br><br>
-        <font color="red"> [Updated on May 31, 2025: Due to visa issues, I cannot attend SoCG 2025 as planned.] </font>
-        <br><br>
-        <font color="red"> [Updated on Jun. 30, 2025: Finally, I successfully attended SoCG 2025!] </font>
-        <br><br>
-        <dt> [Mar. 19, 2025] </dt>
-        I will join the University of Hong Kong as a research assistant from May 2025 to July 2025.
-        <br><br>
-        <dt> [Feb. 14, 2025] </dt>
-        I will visit the University of Hong Kong from Feb. 23, 2025, to March 8, 2025, hosted by Prof. <a href="https://fwm94.github.io/">Weiming Feng</a>.
-        <br><br>
-        <dt> [Feb. 7, 2025] </dt>
-        One paper on dynamically maintaining the maximum depth of geometric objects was accepted by <Cpaper> SoCG 2025</Cpaper>.
-        <br><br>
-        <dt> [Oct. 4, 2024] </dt>
-        One paper on establishing spectral independence via an approximate inverse of the influence matrix
-        was accepted by <Cpaper> SODA 2025</Cpaper>.
-        <br><br>
-        <dt> [Oct. 1, 2024] </dt>
-        I will join New York University Shanghai as a research assistant in fall 2024 (Oct. 2024 to Jan. 2025).
-        <br><br>
-        <font color="red"> [Revised on Jul. 9, 2025: I will join New York University Shanghai as a research associate in fall 2024 (Oct. 2024 to Jan. 2025).] </font>
-        <br><br>
-        <dt> [Jun. 29, 2024] </dt>
-        I just graduated from Northeast Normal University as an outstanding graduate student (<XiaoWei>优秀毕业生</XiaoWei>). &#128557
-        <br><br>
-        <dt> [Mar. 2, 2024] </dt>
-        One paper on the windability barrier for the six-vertex model and approximability of the four-vertex
-        model was accepted by <Jpaper> Theor. Comput. Sci.</Jpaper>.
+      <dl class="news-list">
+
+        <dt>[Sept. 8, 2025]</dt>
+        <dd>Started the new journey in Santa Barbara! &#128747;</dd>
+
+        <dt>[Jun. 28, 2025]</dt>
+        <dd>
+          I attended the <span class="tag-conf">SoCG 2025</span> at Kanazawa, Japan,
+          where I also gave a talk about dynamic maximum depth of geometric objects. This is my first time to attend an
+          international conference! &#129395;
+        </dd>
+
+        <dt>[Jun. 18, 2025]</dt>
+        <dd>
+          We translated <i>The Art of Computer Programming Volume 4B: Combinatorial Algorithms, Part 2</i> into the
+          Chinese version
+          <span class="chinese-name">《计算机程序设计艺术 卷4B：组合算法（二）》</span>.
+          The book has now been published by Posts & Telecommunications Press! &#129321;
+        </dd>
+
+        <dt>[May 31, 2025]</dt>
+        <dd>
+          I gave a talk about dynamic maximum depth of geometric objects at <span class="tag-conf">AAAC 2025</span>,
+          which was my first talk in English at a workshop.
+        </dd>
+
+        <dt>[Mar. 29, 2025]</dt>
+        <dd>
+          I will give talks about dynamic maximum depth of geometric objects at <span class="tag-conf">AAAC 2025</span> (at Hong Kong) and <span class="tag-conf">SoCG 2025</span> (at Kanazawa, Japan).
+            href="https://conference.cs.cityu.edu.hk/aaac2025/" class="tag-conf">AAAC 2025</a> (at Hong Kong) and <a
+            href="https://socg25.github.io/" class="tag-conf">SoCG 2025</a> (at Kanazawa, Japan).
+
+          <div class="text-danger small mt-2">
+            [Updated on May 31, 2025: Due to visa issues, I cannot attend SoCG 2025 as planned.]
+          </div>
+          <div class="text-danger small mt-1">
+            [Updated on Jun. 30, 2025: Finally, I successfully attended SoCG 2025!]
+          </div>
+        </dd>
+
+        <dt>[Mar. 19, 2025]</dt>
+        <dd>I will join the University of Hong Kong as a research assistant from May 2025 to July 2025.</dd>
+
+        <dt>[Feb. 14, 2025]</dt>
+        <dd>
+          I will visit the University of Hong Kong from Feb. 23, 2025, to March 8, 2025, hosted by Prof. <a
+            href="https://fwm94.github.io/">Weiming Feng</a>.
+        </dd>
+
+        <dt>[Feb. 7, 2025]</dt>
+        <dd>
+          One paper on dynamically maintaining the maximum depth of geometric objects was accepted by <span
+            class="tag-conf">SoCG 2025</span>.
+        </dd>
+
+        <dt>[Oct. 4, 2024]</dt>
+        <dd>
+          One paper on establishing spectral independence via an approximate inverse of the influence matrix
+          was accepted by <span class="tag-conf">SODA 2025</span>.
+        </dd>
+
+        <dt>[Oct. 1, 2024]</dt>
+        <dd>
+          I will join New York University Shanghai as a research assistant in fall 2024 (Oct. 2024 to Jan. 2025).
+          <div class="text-danger small mt-2">
+            [Revised on Jul. 9, 2025: I will join New York University Shanghai as a research associate in fall 2024
+            (Oct. 2024 to Jan. 2025).]
+          </div>
+        </dd>
+
+        <dt>[Jun. 29, 2024]</dt>
+        <dd>
+          I just graduated from Northeast Normal University as an outstanding graduate student (<span
+            class="chinese-name">优秀毕业生</span>). &#128557;
+        </dd>
+
+        <dt>[Mar. 2, 2024]</dt>
+        <dd>
+          One paper on the windability barrier for the six-vertex model and approximability of the four-vertex
+          model was accepted by <span class="tag-journal">Theor. Comput. Sci.</span>
+        </dd>
+
       </dl>
     </div>
 
-
   </main>
 
-
-  <!-- Footer -->
   <footer>
-    <div class="container_footer">
-      ©Copyright 2025 Xiongxin Yang. <br>
-      Last updated: Sept. 12, 2025. <br>
-      <a href="../acknowledgement/">Acknowledgement.</a>
+    <div class="container container_footer">
+      © Copyright 2025 Xiongxin Yang. <br>
+      Last updated: Nov. 21, 2025. <br>
+      <a href="../acknowledgement/">About the Website</a>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <!-- Include every Bootstrap JavaScript plugin and dependency with one of two bundles. 
-  Both bootstrap.bundle.js and bootstrap.bundle.min.js include Popper for tooltips and popovers.  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>

@@ -9,87 +9,74 @@ function html_to_element(html) {
     return template.content.firstChild;
 }
 
-
-// a html code generator
-/* 
------- generate:  ------
-
-<details class="pub-item">
-<summary class="pub-summary"> Rapid mixing of Glauber dynamics via spectral independence for all degrees
-    <p class="coauthors">with <a>Weiming Feng</a>, <a>Yitong Yin</a> and <a>Xinyuan Zhang</a></p>
-    <div class="pub-info">
-    <div class="JC"> FOCS 2021 </div>
-    <div class="pub-links">
-        <a class="pub-link">arxiv</a>
-        <a class="pub-link">PDF</a>
-    </div>
-    </div>
-</summary>
-<p class="pub-intro"> test </p>
-</details>
-
------- from: ------
-
-{
-    title: "Rapid mixing of Glauber dynamics via spectral independence for all degrees",
-    authors: [
-        {name: "Weiming Feng", link: ""},
-        {name: "Yitong Yin", link: ""},
-        {name: "Xinyuan Zhang", link: ""}
-    ],
-    JC: {category: "C", name: "FOCS 2021"},
-    links: [
-        {name: "arxiv", link: ""},
-        {name: "PDF", link: ""}
-    ],
-    intro: "test"
-}
-
-*/
+/**
+ * Generate a publication item element
+ */
 function gen_pub_item(table) {
-    template_item = `
+    // 关键修改 1：给 title 加了 <div class="pub-title">
+    // 关键修改 2：将 coauthors 改为 div，避免布局干扰
+    var template_item = `
       <details class="pub-item">
-        <summary class="pub-summary"> ${table.title}
-          <p class="coauthors"></p>
+        <summary class="pub-summary">
+          <div class="pub-title">${table.title}</div>
+          <div class="coauthors"></div>
           <div class="pub-info">
             <div class="${table.JC.category}"> ${table.JC.name} </div>
             <div class="pub-links"> </div>
           </div>
         </summary>
-        <p class="pub-intro"> ${table.intro} </p>
+        <div class="pub-intro"> ${table.intro} </div>
       </details> `;
-    item = html_to_element(template_item);
 
-    // add authors list
-    authors = item.getElementsByClassName('coauthors')[0];
+    var item = html_to_element(template_item);
+
+    // --- Add authors list ---
+    var authors = item.getElementsByClassName('coauthors')[0];
     for (let i = 0; i < table.authors.length; i++) {
-        pre_text = '';
+        var pre_text = '';
         if (i == 0) pre_text = "with ";
-        else if (i == table.authors.length - 1) pre_text = " and ";
+        else if (i == table.authors.length - 1) pre_text = ", and ";
         else pre_text = ", ";
+
         authors.appendChild(document.createTextNode(pre_text));
 
-        author = table.authors[i];
-        template_author = `<a href="${author.link}" style="color: black;">${author.name}</a>`;
-        if (author.link == "") template_author = `<a>${author.name}</a>`;
-        author_item = html_to_element(template_author);
+        var author = table.authors[i];
+
+        // 关键修改 3：移除了内联 style="color:black"，改为由 CSS 控制
+        // 如果没有 link，使用 <span> 而不是空的 <a>
+        var template_author = "";
+        if (author.link && author.link !== "") {
+            template_author = `<a href="${author.link}" target="_blank">${author.name}</a>`;
+        } else {
+            template_author = `<span>${author.name}</span>`;
+        }
+
+        var author_item = html_to_element(template_author);
         authors.appendChild(author_item);
     }
 
-    // add links list
-    links = item.getElementsByClassName('pub-links')[0];
+    // --- Add links list (PDF, Arxiv, etc.) ---
+    var links = item.getElementsByClassName('pub-links')[0];
     for (let i = 0; i < table.links.length; i++) {
-        link = table.links[i];
-        template_link = `<a class="pub-link" href="${link.link}">${link.name}</a>`;
-        link_item = html_to_element(template_link);
+        var link = table.links[i];
+        // 统一添加 target="_blank" 在新标签页打开链接
+        var template_link = `<a class="pub-link" href="${link.link}" target="_blank">${link.name}</a>`;
+        var link_item = html_to_element(template_link);
         links.appendChild(link_item);
     }
 
     return item;
 }
 
+/**
+ * Add publication to the target element
+ */
 function add_pub(table) {
-    item = gen_pub_item(table)
-    target = document.getElementById('pub-target');
-    target.appendChild(item);
+    var item = gen_pub_item(table);
+    var target = document.getElementById('pub-target');
+    if (target) {
+        target.appendChild(item);
+    } else {
+        console.error("Error: Element with id 'pub-target' not found.");
+    }
 }

@@ -1,11 +1,9 @@
+/* ================= Fonts ================= */
+
 @font-face {
     font-family: "XiaoWei";
     src: url("../fonts/ZCOOLXiaoWei-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Jersey15";
-    src: url("../fonts/Jersey15-Regular.ttf");
+    /* 建议添加 format('truetype') 以提高兼容性 */
 }
 
 @font-face {
@@ -13,279 +11,256 @@
     src: url("../fonts/Sedan/Sedan-Regular.ttf");
 }
 
-/* ------------------------ header -----------------------  */
+/* ================= Global Styles ================= */
 
-.navbar-brand {
-    font-variant: small-caps;
-    font-weight: bold;
-    color: black;
-    font-size: 130%;
-}
-
-.nav-link {
-    font-weight: 600;
-    color: black;
-    font-size: 100%;
-}
-
-
-/* -------------------------- body -----------------------  */
-
-
-/* flex CSS简写属性设置了弹性项目如何增大或缩小以适应其弹性容器中可用的空间。
-
-此属性是以下 CSS 属性的简写：
-
-flex-grow
-flex-shrink
-flex-basis */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-
+/* 弹性布局设置，用于Sticky Footer */
 body {
     overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: Sedan;
+    font-family: "Sedan", "Times New Roman", serif;
+    /* 添加 Fallback 字体 */
     margin: 0;
     padding: 0;
+    color: #212529;
+    /* Bootstrap 默认深灰，比纯黑柔和 */
 }
 
-/* -------------------------- main -----------------------  */
-
 main {
-    box-sizing: border-box;
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: auto;
+    padding-top: 20px;
 }
 
-/* -------------------------- footer -----------------------  */
+a {
+    text-decoration: none;
+    color: #2c6c8c;
+    /* 学术蓝，对比度更高 */
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #d94e41;
+    /* 悬停时变为番茄红 */
+    text-decoration: underline;
+}
+
+/* ================= Header & Navbar ================= */
+
+/* 针对 navbar 类的背景色设置 */
+.navbar {
+    background-color: #EcE6E6;
+}
+
+.navbar-brand {
+    font-variant: small-caps;
+    font-weight: bold;
+    color: #000 !important;
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: #444 !important;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.nav-link.active {
+    color: #000 !important;
+    text-decoration: underline;
+    text-decoration-color: #d94e41;
+    text-underline-offset: 4px;
+}
+
+/* ================= Profile Section ================= */
+
+/* 修复：加上点号 */
+.container {
+    padding-right: 1.5rem;
+    /* 稍微减小一点 padding */
+    padding-left: 1.5rem;
+}
+
+.imgshadow {
+    /* 使用 RGBA 实现更柔和的阴影 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.imgshadow:hover {
+    transform: translateY(-2px);
+    /* 鼠标悬停微动效果 */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* 图标间距 */
+}
+
+.icon {
+    font-size: 2rem;
+    /* 约32px */
+    color: #495057;
+    transition: color 0.2s;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+.normal-text {
+    font-size: 1.15rem;
+    /* 约18.4px */
+    line-height: 1.6;
+}
+
+/* 中文字体类 */
+.chinese-name {
+    font-family: "XiaoWei", "KaiTi", serif;
+}
+
+/* ================= News Section ================= */
+
+.section-bg {
+    background-color: #f8f9fa;
+    /* 浅灰背景 */
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.section-heading {
+    font-variant: small-caps;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: #000;
+}
+
+.archive-link {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* News List Layout - 使用 Grid 对齐日期 */
+.news-list {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* 左列自适应，右列占满 */
+    gap: 10px 20px;
+    /* 行间距10px，列间距20px */
+    font-size: 1.1rem;
+}
+
+.news-list dt {
+    grid-column: 1;
+    color: #656565;
+    white-space: nowrap;
+    /* 防止日期换行 */
+}
+
+.news-list dd {
+    grid-column: 2;
+    margin: 0;
+    margin-bottom: 15px;
+    /* 条目间距 */
+}
+
+.conf-link {
+    color: tomato;
+}
+
+/* ================= Publication Elements ================= */
+
+.tag-conf {
+    color: tomato;
+}
+
+.tag-journal {
+    color: deeppink;
+}
+
+.tag-manuscript {
+    color: rgb(27, 77, 168);
+
+}
+
+/* 论文链接按钮 (PDF, Arxiv, etc.) */
+.pub-link {
+    color: #333;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    margin-left: 5px;
+    transition: all 0.2s;
+}
+
+.pub-link:hover {
+    background-color: #d94e41;
+    color: white;
+    text-decoration: none;
+    border-color: #d94e41;
+}
+
+/* ================= Footer ================= */
 
 footer {
     flex-shrink: 0;
     background-color: #EcE6E6;
-    color: black;
+    color: #333;
     width: 100%;
-    line-height: 1.8;
+    font-size: 0.9rem;
 }
-
 
 .container_footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px 0;
+    line-height: 1.6;
 }
 
+/* ================= Responsive (Mobile) ================= */
 
-/* -------------------------- section -----------------------  */
+@media (max-width: 768px) {
 
-container{
-    padding-right: 2em;
-    padding-left: 2em;
+    /* 手机端调整 */
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .news-list {
+        display: block;
+        /* 手机上取消 Grid，改为上下堆叠 */
+    }
+
+    .news-list dt {
+        display: block;
+        margin-bottom: 2px;
+        color: #495057;
+    }
+
+    .news-list dd {
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .img-container {
+        margin-bottom: 20px;
+    }
+
+    .section-heading {
+        margin-top: 0;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
 }
 
-.container_section {
-    display: flex;
-    margin-top: 60px;
-}
-
-.section-title {
-    width: 400px;
-}
-
-.section-content {
-    flex: 1;
-}
-
-/* -------------------------- head -----------------------  */
-
-
-H1 {
-    font-variant: small-caps;
-    font-size: 280%;
-    margin-bottom: 1.5ex;
-    margin-top: 1.5ex;
-    padding-left: 0em;
-    color: #000000;
-    text-align: center;
-}
-
-
-XiaoWei {
-    font-family: XiaoWei;
-
-}
-
-
-/* -------------------------- paragraph -----------------------  */
-
-.normal-text {
-    font-size: 19px;
-    margin-top: 10px;
-  }
-
-/* -------------------------- icon -----------------------  */
-
-.icon {
-    font-size: 40px;
-    margin: 0 5px;  /* 左右各10px间距 */
-  }
-
-/* ------------------------ news -----------------------------  */
-
-.news {
-    margin-top: 10px;
-    font-size: 19px;
-}
-
-.news dt {
-    display: inline;
-    font-weight: bold;
-  }
-
-
-/* ------------------------ publication -----------------------------  */
-
-.pub-title,
-.coauthors {
-    margin: 1px;
-}
-
-.pub-info {
-    display: flex;
-    align-items: center;
-}
-
-
-.pub-links {
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.pub-link {
-    color: black;
-    background-color: rgb(230, 230, 230);
-    border-radius: 4px;
-    margin-left: 3px;
-    padding: 3px;
-    font-size: 15px;
-}
-
-.pub-intro {
-    margin-top: 5px;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    padding: 12px;
-}
-
-.coauthors,
-.pub-info,
-.pub-intro {
-    margin-left: 22px;
-    margin-right: 18px;
-}
-
-.pub-summary {
-    font-size: 20px;
-}
-
-.coauthors,
-.pub-info,
-.pub-intro {
-    
-    font-size: 17px;
-}
-
-
-.C {
-    /* color for conference paper */
-    color: tomato;
-}
-
-.J {
-    /* color for journal paper */
-    color: deeppink;
-}
-
-.M {
-    /* color for manuscript */
-    color: rgb(27, 77, 168);
-}
-
-.pub-item {
-    /* space between two items */
-    margin-top: 16px;
-}
-
-Jpaper {
-    color: deeppink;
-}
-
-Cpaper {
-    color: tomato;
-}
-
-
-.translation-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.translation-item {
-    margin-bottom: 30px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.translation-item::before {
-    content: "▶";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #333;
-    font-size: 16px;
-}
-
-.translation-title {
-    font-size: 20px;
-    color: #000000;
-    margin-bottom: 5px;
-    line-height: 1.3;
-}
-
-.translation-info {
-    color: #000000;
-    font-size: 17px;
-    margin-bottom: 5px;
-}
-/* -------------------------------------------------------------------  */
-
-.notice {
-    font-size: 15px;
-    color: red;
-}
-
-/* --------------------------- link -----------------------------------  */
-
-
-a {
-    text-decoration: none;
-    color: #A7BEC6;
-}
-
-/* -------------------------- img --------------------------------  */
-
-.imgshadow {
-    box-shadow: 2px 2px 5px #000;
-}
-
-/* ---------------------- erdosgraph -----------------------------  */
+/* ================= Optional: Erdos Graph (保留你原有的) ================= */
 
 .erdosgraph .node {
     stroke: #fff;
@@ -308,8 +283,138 @@ a {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-.erdosgraph .info-box h3 {
-    margin-top: 0;
-    font-size: 16px;
-    color: #333;
+/* ============================================
+   Publications Specific Styles (恢复脚本依赖的样式)
+   ============================================ */
+
+/* 每一篇论文的容器 */
+.pub-item {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
+
+/* 1. 论文标题：加大字号 */
+.pub-item .pub-title {
+    font-size: 1.1rem !important;
+    /* 强制改为 24px */
+    color: #000;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    display: inline;
+}
+
+/* 2. 作者列表：字号缩小 */
+.pub-item .coauthors {
+    margin-left: 22px;
+    margin-bottom: 6px;
+    font-size: 1rem !important;
+}
+
+.coauthors a {
+    color: #000 !important;
+    /* 强制改为纯黑 */
+    text-decoration: none;
+    /* 平时去掉下划线，看着更清爽 */
+    border-bottom: 1px solid transparent;
+    /* 占位，防止hover时抖动 */
+}
+
+.coauthors a:hover {
+    color: #2c6c8c !important;
+    text-decoration: underline;
+}
+
+/* 3. 论文信息（会议名）：保持原样或微调 */
+.pub-info {
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    margin-right: 18px;
+    font-size: 1.05rem;
+    /* 约 16.8px */
+    flex-wrap: wrap;
+}
+
+/* 右侧的链接区域 (PDF, Slides等) */
+.pub-links {
+    margin-left: auto;
+    /* 这行代码最重要：把按钮推到最右边 */
+    margin-right: 0;
+    display: flex;
+    gap: 5px;
+}
+
+/* 论文介绍框 (Abstract/Intro) */
+.pub-intro {
+    margin-top: 8px;
+    margin-left: 22px;
+    margin-right: 18px;
+    padding: 12px;
+    border: 2px solid #eee;
+    /* 边框颜色改淡一点 */
+    border-radius: 5px;
+    background-color: #fafafa;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 脚本生成的分类颜色类名 (必须保留，否则 C/J/M 没颜色) */
+.C {
+    color: tomato;
+    font-weight: bold;
+}
+
+/* Conference */
+.J {
+    color: deeppink;
+    font-weight: bold;
+}
+
+/* Journal */
+.M {
+    color: rgb(27, 77, 168);
+    font-weight: bold;
+}
+
+/* Manuscript */
+
+/* 手机端适配：取消缩进，防止太挤 */
+@media (max-width: 768px) {
+
+    .coauthors,
+    .pub-info,
+    .pub-intro {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .pub-links {
+        margin-left: 0;
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   People Page Styles (Apply .coauthors style to normal-text links)
+   ========================================================================== */
+
+/* 针对 People 页面中 .normal-text 下的所有链接 (Mentors, Collaborators, Friends) */
+/* 找到这一段，添加 white-space 和 display 属性 */
+.normal-text a {
+    color: #000 !important;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease;
+
+    /* 🟢 新增：禁止文字内部换行 */
+    white-space: nowrap;
+    /* 🟢 新增：让链接保持行内块特性，更稳固 */
+    display: inline-block;
+}
+
+.normal-text a:hover {
+    color: #2c6c8c !important;
+    text-decoration: underline;
+}
+

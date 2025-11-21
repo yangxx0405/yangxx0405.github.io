@@ -1,77 +1,86 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
-
-  <!-- Meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Xiongxin Yang">
+  <title>About the Website | Xiongxin Yang</title>
 
-  <!-- Bootstrap CSS -->
-  <!-- Copy-paste the stylesheet <link> into your <head> before all other stylesheets to load CSS. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-
-  <!-- local scripts -->
-  <script src="../script/pub-item.js"></script>
-  <script src="../script/navbar.js" defer></script>
-
-  <!-- Local CSS -->
-  <link rel="stylesheet" type="text/css" href="../css/index.css" />
-
-  <!-- Title -->
-  <title>Xiongxin Yang</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/academicons.css">
 
 </head>
 
 <body>
 
   <header>
-    <div id="navbar-container"></div>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light shadow-sm" style="background-color: #EcE6E6;">
+      <div class="container">
+        <a class="navbar-brand" href="../">Xiongxin Yang</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../publication/">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../people/">People</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
-
-
-
-
-
-  <!-- Publications -->
   <main>
-    <h1 style="font-size: 35px;padding-top: 40pt;"> Acknowledgement </h1>
 
+    <section class="py-5 mt-5">
+      <div class="container">
 
-    <div class="container">
-      <p style="font-size: 19px; margin-top: 10px;">
-        Due to my limited proficiency in web page design,
-        I sought assistance from many friends while constructing this personal webpage.
-        Their names are listed below in chronological order.
-        Thank you all!
-      </p>
-      <p style="font-size: 19px; margin-top: 10px;">
-        <a href="https://chenxiaoyu233.github.io/info/">Xiaoyu Chen</a>, 
-        <a href="https://virgiling.wiki/">Dian Ling</a>
-        
-      </p>
-    </div>
+        <div class="text-center mb-5">
+          <h1 class="section-heading">About the Website</h1>
+        </div>
 
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="normal-text lh-lg">
+              <p class="mb-4">
+                Given my limited background in web design, I relied heavily on LLM tools—ChatGPT, Gemini, and Claude—to build this
+                personal website. I also received invaluable help from many friends, whose names are listed below in chronological
+                order. Thank you all!
+              </p>
+
+              <p>
+                <a href="https://chenxiaoyu233.github.io/info/">Xiaoyu Chen</a>,
+                <a href="https://virgiling.wiki/">Dian Ling</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
   </main>
 
-
-  <!-- Footer -->
   <footer>
-    <div class="container_footer">
+    <div class="container container_footer">
       ©Copyright 2025 Xiongxin Yang. <br>
-      Last updated: Apr. 28, 2025. <br>
+      Last updated: Nov. 21, 2025.
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
-  <!-- Include every Bootstrap JavaScript plugin and dependency with one of two bundles. 
-  Both bootstrap.bundle.js and bootstrap.bundle.min.js include Popper for tooltips and popovers.  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
