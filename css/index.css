@@ -283,9 +283,53 @@ footer {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* ============================================
+/* ==========================================================================
    Publications Specific Styles (恢复脚本依赖的样式)
-   ============================================ */
+   ========================================================================== */
+
+/* 🟢【新增】修复 iOS/Safari 箭头显示问题 */
+
+/* 1. 隐藏默认的丑陋箭头 (针对 Chrome/Safari) */
+.pub-summary::-webkit-details-marker {
+    display: none;
+}
+
+/* 2. 基本设置与悬挂缩进布局 */
+.pub-summary {
+    list-style: none;
+    cursor: pointer;
+    position: relative;
+    /* 关键：作为定位参考点 */
+    padding-left: 1.2rem;
+    /* 关键：给箭头留出左侧空间，文字整体右移 */
+}
+
+/* 3. 使用 ::before 伪元素添加自定义字符箭头 */
+.pub-summary::before {
+    content: "▶";
+    font-size: 0.8rem;
+    color: black;
+
+    /* 改为绝对定位 */
+    position: absolute;
+    left: 0;
+    /* 固定在最左侧 */
+    top: 4px;
+    /* 微调垂直位置，根据你的字体大小调整，通常 3px-5px */
+
+    transition: transform 0.2s ease;
+    /* 移除了 display: inline-block 和 margin-right，因为不再需要流式布局 */
+}
+
+/* 4. 当点击展开时，箭头旋转 90 度 */
+details[open] .pub-summary::before {
+    transform: rotate(90deg);
+    /* 保持旋转中心在几何中心 */
+    transform-origin: center center;
+}
+
+/* 🟢【结束】修复 iOS/Safari 箭头显示问题 */
+
 
 /* 每一篇论文的容器 */
 .pub-item {
@@ -301,6 +345,7 @@ footer {
     margin-bottom: 8px;
     line-height: 1.3;
     display: inline;
+    /* 确保标题紧跟在箭头后面 */
 }
 
 /* 2. 作者列表：字号缩小 */
@@ -417,4 +462,3 @@ footer {
     color: #2c6c8c !important;
     text-decoration: underline;
 }
-
