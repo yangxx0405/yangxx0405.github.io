@@ -4,12 +4,15 @@ const graph = {
         { id: "Erdos", name: "Paul Erdös", erdosNumber: 0 },
         { id: "Alon", name: "Noga Alon", erdosNumber: 1 },
         { id: "Aronov", name: "Boris Aronov", erdosNumber: 1 },
+        { id: "Luczak", name: "Tomasz Łuczak", erdosNumber: 1 },
         { id: "Moran", name: "Shlomo Moran", erdosNumber: 1 },
         { id: "Pollack", name: "Richard M. Pollack", erdosNumber: 1 },
+        { id: "Tetali", name: "Prasad Tetali", erdosNumber: 1 },
         { id: "Valtr", name: "Pavel Valtr", erdosNumber: 1 },
         { id: "Yao", name: "Frances Foong Yao", erdosNumber: 1 },
         { id: "Bhore", name: "Sujoy Bhore", erdosNumber: 2 },
         { id: "Suri", name: "Subhash Suri", erdosNumber: 2 },
+        { id: "Vigoda", name: "Eric Vigoda", erdosNumber: 2 },
         { id: "You", name: "Me", erdosNumber: 3 },
     ],
     links: [
@@ -57,6 +60,20 @@ const graph = {
               <i> Discrete Math. 64.1 (1987): 1-11. </i>"
         },
         {
+            source: "Erdos", target: "Luczak",
+            papers:
+                "PAUL ERDÖS, TOMASZ ŁUCZAK, and Joel H. Spencer. <br>\
+              <b> Subgraphs of Large Minimal Degree. </b> <br>\
+              In <i> Random Graphs, Vol. 2 (1992): 59-66. </i>"
+        },
+        {
+            source: "Erdos", target: "Tetali",
+            papers:
+                "PAUL ERDÖS and PRASAD TETALI. <br>\
+              <b> Representations of Integers as the Sum of $k$ Terms. </b> <br>\
+              <i> Random Structures & Algorithms 1.3 (1990): 245-261. </i>"
+        },
+        {
             source: "Alon", target: "Suri",
             papers:
                 "Pankaj K. Agarwal, NOGA ALON, Boris Aronov, and SUBHASH SURI. <br>\
@@ -97,11 +114,32 @@ const graph = {
               In <i> International Workshop on Combinatorial Algorithms (IWOCA 2019). </i>"
         },
         {
+          source: "Luczak", target: "Vigoda",
+          papers:
+            "TOMASZ ŁUCZAK and ERIC VIGODA. <br>\
+              <b> Torpid Mixing of the Wang–Swendsen–Kotecký Algorithm for Sampling Colorings. </b> <br>\
+              <i> J. Discrete Algorithms 3.1 (2005): 92-100. </i>"
+        },
+        {
+          source: "Tetali", target: "Vigoda",
+          papers:
+            "Christian Borgs, Jennifer T. Chayes, Alan Frieze, Jeong Han Kim, PRASAD TETALI, ERIC VIGODA, and Van Ha Vu. <br>\
+              <b> Torpid Mixing of Some Monte Carlo Markov Chain Algorithms in Statistical Physics. </b> <br>\
+              In <i> Proceedings of the 40th Annual IEEE Symposium on Foundations of Computer Science (FOCS 1999): 218-229. </i>"
+        },
+        {
           source: "Bhore", target: "You",
           papers:
             "SUJOY BHORE, Subhash Suri, Jie Xue, XIONGXIN YANG, and Jiumu Zhu. <br>\
               <b> Near-Optimal Dynamic Data Structures for Maximum Depth and Klee’s Measure of Boxes. </b> <br>\
               <i> Preprint. </i>"
+        },
+        {
+          source: "Vigoda", target: "You",
+          papers:
+            "Xiaoyu Chen, ERIC VIGODA, and XIONGXIN YANG. <br>\
+              <b> Faster FPRAS for the Permanent via Restricted Poincaré Inequalities and Coupled Flows. </b> <br>\
+              <i> arXiv:2608.26599 (2026). </i>"
         },
         {
             source: "Suri", target: "You", papers:
@@ -113,7 +151,7 @@ const graph = {
 
 // 2. 设置画布大小
 const width = 800;
-const height = 600; // 保持 600 高度以容纳所有节点
+const height = 720; // 为新增路径留出足够的垂直空间
 
 const svg = d3
     .select("#erdosgraph")
