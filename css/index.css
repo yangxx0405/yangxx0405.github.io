@@ -35,6 +35,8 @@ main {
 }
 
 a {
+    /* Allow long URLs to wrap when they cannot fit on one line. */
+    overflow-wrap: anywhere;
     text-decoration: none;
     color: #2c6c8c;
     /* 学术蓝，对比度更高 */
@@ -197,8 +199,10 @@ a:hover {
     padding: 2px 8px;
     font-size: 0.9rem;
     margin-left: 0;
-    flex: 0 0 auto;
-    white-space: nowrap;
+    flex: 0 1 auto;
+    min-width: 0;
+    max-width: 100%;
+    white-space: normal;
     transition: all 0.2s;
 }
 
@@ -384,6 +388,8 @@ details[open] .pub-summary::before {
 
 /* 右侧的链接区域 (PDF, Slides等) */
 .pub-links {
+    min-width: 0;
+    max-width: 100%;
     margin-left: auto;
     /* 这行代码最重要：把按钮推到最右边 */
     margin-right: 0;
@@ -430,7 +436,7 @@ details[open] .pub-summary::before {
 /* 手机端适配：取消缩进，防止太挤 */
 @media (max-width: 768px) {
 
-    .coauthors,
+    .pub-item .coauthors,
     .pub-info,
     .pub-intro {
         margin-left: 0;
@@ -446,21 +452,18 @@ details[open] .pub-summary::before {
 }
 
 /* ==========================================================================
-   People Page Styles (Apply .coauthors style to normal-text links)
+   Text Links (Home and People pages)
    ========================================================================== */
 
-/* 针对 People 页面中 .normal-text 下的所有链接 (Mentors, Collaborators, Friends) */
-/* 找到这一段，添加 white-space 和 display 属性 */
+/* Keep links inline so names and institutions can wrap with the paragraph. */
 .normal-text a {
     color: #000 !important;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color 0.2s ease;
 
-    /* 🟢 新增：禁止文字内部换行 */
-    white-space: nowrap;
-    /* 🟢 新增：让链接保持行内块特性，更稳固 */
-    display: inline-block;
+    white-space: normal;
+    display: inline;
 }
 
 .normal-text a:hover {
