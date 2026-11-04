@@ -300,6 +300,10 @@ footer {
     display: none;
 }
 
+.pub-summary::marker {
+    content: "";
+}
+
 /* 2. 基本设置与悬挂缩进布局 */
 .pub-summary {
     list-style: none;
@@ -310,28 +314,25 @@ footer {
     /* 关键：给箭头留出左侧空间，文字整体右移 */
 }
 
-/* 3. 使用 ::before 伪元素添加自定义字符箭头 */
+/* 3. 用 CSS 边框绘制三角形，避免字符被渲染成 emoji */
 .pub-summary::before {
-    content: "▶";
-    font-size: 0.8rem;
-    color: black;
-
-    /* 改为绝对定位 */
+    content: "";
     position: absolute;
     left: 0;
-    /* 固定在最左侧 */
-    top: 4px;
-    /* 微调垂直位置，根据你的字体大小调整，通常 3px-5px */
-
+    top: 0.4rem;
+    width: 0;
+    height: 0;
+    border-top: 0.3rem solid transparent;
+    border-right: 0;
+    border-bottom: 0.3rem solid transparent;
+    border-left: 0.45rem solid #000;
+    transform-origin: center center;
     transition: transform 0.2s ease;
-    /* 移除了 display: inline-block 和 margin-right，因为不再需要流式布局 */
 }
 
-/* 4. 当点击展开时，箭头旋转 90 度 */
+/* 4. 展开时将向右的三角形旋转为向下 */
 details[open] .pub-summary::before {
     transform: rotate(90deg);
-    /* 保持旋转中心在几何中心 */
-    transform-origin: center center;
 }
 
 /* 🟢【结束】修复 iOS/Safari 箭头显示问题 */
